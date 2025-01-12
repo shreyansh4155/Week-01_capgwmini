@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class MultiplicationTable {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Array to store the multiplication results
+        int[] multiplicationTable = new int[10];
+
+        // Calculate and store multiplication results
+        for (int i = 1; i <= 10; i++) {
+            multiplicationTable[i - 1] = number * i;
+        }
+
+        // Print the multiplication table
+        System.out.println("Multiplication Table of " + number + ":");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(number + " x " + (i + 1) + " = " + multiplicationTable[i]);
+        }
+
+        scanner.close();
+    }
+}
